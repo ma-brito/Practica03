@@ -5,13 +5,37 @@ public class Menu{
 	
 	public static void main(String[] args){
 
-		WaySub baguette = new Baguette();
-		String ticket;
-		double precio;
-		int opcionPan;
-
+	
+		int opcionComida;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Bienvenido a baguette Subs, ¿Que desea ordenar?");
+		System.out.println("Que vas a ordenar, una pizza o un baguette?");
+		System.out.println(
+				"1.- Pizza.\n" +
+				"2.- Baguette.\n");
+
+				while (true){
+					try {
+						String opcionUsuario = sc.nextLine();
+						opcionComida = Integer.parseInt(opcionUsuario);
+						break;
+					}catch (NumberFormatException ex){
+						System.out.println("Por favor elige la opcion VALIDA ");
+						System.out.println("Que vas a ordenar, una pizza o un baguette?");
+						System.out.println(
+							"1.- Pizza.\n" +
+							"2.- Baguette.\n");
+					}
+				}
+		
+				switch(opcionComida){
+
+					case 1:
+					WaySub baguette = new Baguette();
+					String ticket;
+					double precio;
+					int opcionPan;
+						baguette =  new PanUno(baguette);
 		System.out.println("Que pan deseas?");
 		System.out.println(
 				"1.- Ajonjoli.\n" +
