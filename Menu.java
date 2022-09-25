@@ -11,8 +11,8 @@ public class Menu{
 		System.out.println("Bienvenido a baguette Subs, ¿Que desea ordenar?");
 		System.out.println("Que vas a ordenar, una pizza o un baguette?");
 		System.out.println(
-				"1.- Pizza.\n" +
-				"2.- Baguette.\n");
+			"1.- Baguette.\n"+
+				"2.- Pizza.\n");
 
 				while (true){
 					try {
@@ -23,8 +23,8 @@ public class Menu{
 						System.out.println("Por favor elige la opcion VALIDA ");
 						System.out.println("Que vas a ordenar, una pizza o un baguette?");
 						System.out.println(
-							"1.- Pizza.\n" +
-							"2.- Baguette.\n");
+							"1.- Baguette.\n"+
+							"2.- Pizza.\n");
 					}
 				}
 		
@@ -151,6 +151,34 @@ public class Menu{
 		}while(!terminar);
 
 		System.out.println("A continuacion, tu ticket de compra:\n" +ticket + "\nPrecio total: " + precio);
+		case 2:
+		Pizza pizzaUno = new Pizza("Hawaiana", "masa delgada", "queso cheddar", "jamón" , 170.00);
+		Pizza pizzaDos = new Pizza("Pepperoni", "masa gruesa","queso manchego", "jamón" , 175.00);
+		Pizza pizzaTres = new Pizza("Salchicha", "masa gruesa","queso cheddar", "salchicha" , 180.00);
+		Pizza pizzaCuatro = new Pizza("Pizza con pollo", "masa delgada","queso machego", "pollo" , 160.00);
+		Pizza pizzaCinco = new Pizza("Especialidad", "masa gruesa","queso manchego", "pollo" , 190.00);
+		Pizza[] pizzas = {pizzaUno, pizzaDos, pizzaTres, pizzaCuatro, pizzaCinco};
+		System.out.println("Que pizza deseas?\n");
+		for(int i = 0; i < pizzas.length; i++){
+			System.out.println((i+1) + ".- " + pizzas[i].getNombre() + " $" + pizzas[i].getPrecio());
+		}
+		int opcionPizza;
+		while (true){
+			try {
+				String opcionUsuario = sc.nextLine();
+				opcionPizza = Integer.parseInt(opcionUsuario);
+				break;
+			}catch (NumberFormatException ex){
+				System.out.println("Por favor, elige una opcion valida de pizza\n");
+				for(int i = 0; i < pizzas.length; i++){
+					System.out.println((i+1) + ".- " + pizzas[i].getNombre() + " $" + pizzas[i].getPrecio());
+				}
+			}
+		}
+		Pizza pizza = pizzas[opcionPizza - 1];
+		AdapterPizza adapterPizza = new AdapterPizza(pizza);
+		System.out.println("A continuacion, tu ticket de compra:\n" +adapterPizza.getTicket() + "\nPrecio total: " + adapterPizza.getPrecio());
+	}
 
 	}
 }
