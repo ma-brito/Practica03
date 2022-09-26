@@ -1,5 +1,10 @@
 public class Xwing implements Nave{
 	
+	/**
+	 * Contructor de la clase nave
+	 * Imprime las intrucciones de la nave
+	 */
+
 	@Override
 	public void impulsar(){
 		System.out.println("\n***IMPULSO***" + 
