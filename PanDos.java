@@ -4,6 +4,10 @@ public class PanDos extends Ingrediente{
 		super(centro);
 	}
 
+    /**
+	 * @return 
+	 */
+
 	public String getTicket(){
 		return centro.getTicket() + "\n+Pan Premium";
 	}

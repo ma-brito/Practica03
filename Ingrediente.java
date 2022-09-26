@@ -1,6 +1,10 @@
 public abstract class Ingrediente implements WaySub{
 	protected WaySub centro;
 
+	 /**
+	 *Contructor de la Clase ingrediente implementada a Waysub.
+	 */
+
 	public Ingrediente(WaySub centro){
 		this.centro = centro;
 	}

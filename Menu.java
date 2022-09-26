@@ -1,11 +1,20 @@
 import java.lang.Math;
 import java.util.Scanner;
 
+    /**
+	 * Constructor de la clase Menu que sera nuestro main
+	 * esta clase imprimira y llamara todas las opciones que quiera elegir el usuario
+	 */
+
 public class Menu{
 	
 	public static void main(String[] args){
 
-	
+	/**
+	 * Metodo que va a imprimir las opciones de comida para el usuario
+	 * @param Scanner nos permite saber si el usuario quiere una baguette o pizza
+	 * @param int opcionComida
+	 */
 		int opcionComida;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Bienvenido a baguette Subs, ¿Que desea ordenar?");
@@ -13,6 +22,7 @@ public class Menu{
 		System.out.println(
 			"1.- Baguette.\n"+
 				"2.- Pizza.\n");
+
 
 				while (true){
 					try {
@@ -26,8 +36,13 @@ public class Menu{
 							"1.- Baguette.\n"+
 							"2.- Pizza.\n");
 					}
-				}
-		
+	/* Este seria en caso de que el usuario pida la baguette
+	 * @param baguette
+	 * @param ticket
+	 * @param precio
+	 * @param OpcionPan
+	 */
+
 				switch(opcionComida){
 
 					case 1:
@@ -56,7 +71,9 @@ public class Menu{
 								"3.- Blanco.\n");
 					}
 				}
-		
+		    /**
+	        * @param switch Opcion de pan que elige el usuario y los casos que fueron su eleccion
+	        */
 				switch(opcionPan){
 
 					case 1:
@@ -72,7 +89,9 @@ public class Menu{
 						break;
 
 				}
-		
+		/**
+	    *Metodo que agrega ingredientes a la baguette y terminarla
+	    */
 		boolean terminar = false;
 		do{
 			int opcion;
@@ -89,8 +108,10 @@ public class Menu{
 						"1-Pollo.\n" + "2.Pepperoni. \n"  + "3.Jamon\n" + "4.Lechuga" + "5.Jitomate\n" + "6.Cebolla\n" + "7.Mostaza\n" + "8.Catsup\n" + "9.mayonesa" ); 
 					}
 				}
-
-				switch(opcion){
+            /**
+	         * @param switch para crear todos los casos. Que ingredientes añadio o si es una opcion valida
+	         */
+			 	switch(opcion){
 
 				case 1:
 					baguette = new Pollo(baguette);
@@ -145,10 +166,22 @@ public class Menu{
 					System.out.println("Opcion no valida");
 					break;
 			}
-
+              /**
+	 * Metodo que te enseña el ticket y el precio de la compra del usuario
+	 * @param Ticket
+	 * @param Precio
+	 */
 			ticket = baguette.getTicket();
 			precio = baguette.getPrecio();
 		}while(!terminar);
+
+		/**
+	 * Metodo que va a mostrar al usuario en caso de que eligiera comer pizza, cual desea ordenar, precio y ticket.
+	 * @param pizzaDos
+	 * @param pizzaTres
+	 * @param pizzaCuatro
+	 * @param pizzaCinco
+	 */
 
 		System.out.println("A continuacion, tu ticket de compra:\n" +ticket + "\nPrecio total: " + precio);
 		case 2:
@@ -175,6 +208,11 @@ public class Menu{
 				}
 			}
 		}
+		
+         /**
+	     * Patron adapter para la pizza, se imprime el ticket de compra y el precio total total
+	     */
+	
 		Pizza pizza = pizzas[opcionPizza - 1];
 		AdapterPizza adapterPizza = new AdapterPizza(pizza);
 		System.out.println("A continuacion, tu ticket de compra:\n" +adapterPizza.getTicket() + "\nPrecio total: " + adapterPizza.getPrecio());
