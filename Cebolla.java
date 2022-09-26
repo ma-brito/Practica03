@@ -22,7 +22,7 @@ public class Cebolla extends Ingrediente{
 	 */
 
 	public double getPrecio(){
-		return centro.getPrecio() + 0.20;
+		return centro.getPrecio() + 1.5;
 	}
 
 }

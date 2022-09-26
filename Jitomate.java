@@ -22,7 +22,7 @@ public class Jitomate extends Ingrediente{
 	 */
 
 	public double getPrecio(){
-		return centro.getPrecio() + 0.50;
+		return centro.getPrecio() + 2;
 	}
 
 }

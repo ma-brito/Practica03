@@ -21,7 +21,7 @@ public class Lechuga extends Ingrediente{
 	 */
 
 	public double getPrecio(){
-		return centro.getPrecio() + 0.25;
+		return centro.getPrecio() + 2.50;
 	}
 
 }

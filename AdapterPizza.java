@@ -2,7 +2,7 @@ public class AdapterPizza implements WaySub{
 
 
 	/**
-	 * Se coloca una pizza en el constructror 
+	 * @param pizza se coloca una pizza en el constructror 
 	 * se implementa a la clase WaySub
 	 * usa los metodos de getTcket y getPrecio
 	 */

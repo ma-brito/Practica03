@@ -20,7 +20,7 @@ public class PanUno extends Ingrediente{
 	 */
 	
 	public double getPrecio(){
-		return centro.getPrecio() + 0.5;
+		return centro.getPrecio() + 2;
 	}
 
 }

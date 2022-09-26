@@ -21,7 +21,7 @@ public class Pollo extends Ingrediente{
 	 */
 
 	public double getPrecio(){
-		return centro.getPrecio() + 1.50;
+		return centro.getPrecio() + 5.50;
 	}
 
 }

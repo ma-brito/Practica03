@@ -17,7 +17,7 @@ public class Mostaza extends Ingrediente{
 		return centro.getTicket() + "\n+Mostaza";
 	}
 
-}
+
 /**
 	 * @return precio agregando cuanto vale la mostaza
 	 */

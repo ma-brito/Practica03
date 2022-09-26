@@ -22,7 +22,7 @@ public class Jamon extends Ingrediente {
 	 */
 
 	public double getPrecio(){
-		return centro.getPrecio() + 0.25;
+		return centro.getPrecio() + 4;
 	}
 
 }
